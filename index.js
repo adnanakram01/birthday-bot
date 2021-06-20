@@ -1,6 +1,8 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
+const dotenv = require('dotenv').config()
+
 var sqlite3 = require('sqlite3').verbose()
 var db = new sqlite3.Database('db.sqlite')
 
@@ -55,4 +57,4 @@ client.on('message', msg => {
 })
 
 
-client.login('Mjk5NjMxMDUzMjkzODc5Mjk2.WOabKQ.cXR_ROoEtU2j_j_dzBygYT7cmvE')
+client.login(process.env.TOKEN)
